@@ -6,23 +6,11 @@
 /*   By: qcyril-a <qcyril-a@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 12:44:51 by qcyril-a          #+#    #+#             */
-/*   Updated: 2025/02/17 00:46:40 by qcyril-a         ###   ########.fr       */
+/*   Updated: 2025/02/17 15:40:10 by qcyril-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-size_t	ft_printp_fd(void *p, int fd)
-{
-	size_t	i;
-
-	i = 0;
-	if (p == 0)
-		return (ft_prints_fd("(nil)", fd));
-	i += ft_prints_fd("0x", fd);
-	i += ft_print_hex_fd((unsigned long)p, 'x', fd);
-	return (i);
-}
 
 size_t	ft_handle_arg(char c, va_list arg, int fd)
 {
@@ -40,7 +28,7 @@ size_t	ft_handle_arg(char c, va_list arg, int fd)
 	if (c == 'u')
 		res = ft_printu_fd(va_arg(arg, unsigned int), fd);
 	if (c == 'x' || c == 'X')
-		res = ft_print_hex_fd(va_arg(arg, unsigned int), c, fd);
+		res = ft_printhex_fd(va_arg(arg, unsigned int), c, fd);
 	if (c == 'p')
 		res = ft_printp_fd(va_arg(arg, void *), fd);
 	return (res);
