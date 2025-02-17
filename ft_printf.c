@@ -14,24 +14,20 @@
 
 size_t	ft_handle_arg(char c, va_list arg, int fd)
 {
-	size_t	res;
-
-	res = 0;
 	if (c == '%')
-		res = ft_printc_fd('%', fd);
+		return (ft_printc_fd('%', fd));
 	if (c == 'c')
-		res = ft_printc_fd(va_arg(arg, int), fd);
+		return (ft_printc_fd(va_arg(arg, int), fd));
 	if (c == 's')
-		res = ft_prints_fd(va_arg(arg, char *), fd);
+		return (ft_prints_fd(va_arg(arg, char *), fd));
 	if (c == 'd' || c == 'i')
-		res = ft_printi_fd(va_arg(arg, int), fd);
+		return (ft_printi_fd(va_arg(arg, int), fd));
 	if (c == 'u')
-		res = ft_printu_fd(va_arg(arg, unsigned int), fd);
+		return (ft_printu_fd(va_arg(arg, unsigned int), fd));
 	if (c == 'x' || c == 'X')
-		res = ft_printhex_fd(va_arg(arg, unsigned int), c, fd);
+		return (ft_printhex_fd(va_arg(arg, unsigned int), c, fd));
 	if (c == 'p')
-		res = ft_printp_fd(va_arg(arg, void *), fd);
-	return (res);
+		return (ft_printp_fd(va_arg(arg, void *), fd));
 }
 
 int	ft_printf(const char *format, ...)

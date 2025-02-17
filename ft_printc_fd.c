@@ -14,7 +14,7 @@
 
 size_t	ft_printc_fd(char c, int fd)
 {
-	if (fd <= 0)
+	if (fd < 0)
 		return (0);
 	write(fd, &c, 1);
 }

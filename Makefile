@@ -15,9 +15,9 @@ NAME = libftprintf.a
 SRC = ft_printf \
 ft_printc_fd \
 ft_prints_fd \
-ft_printhex_fd \
 ft_printu_fd \
 ft_printi_fd \
+ft_printhex_fd \
 ft_printp_fd
 
 CC = gcc

@@ -17,7 +17,7 @@ size_t	ft_printp_fd(void *p, int fd)
 	size_t	i;
 
 	i = 0;
-	if (p == 0)
+	if (!p)
 		return (ft_prints_fd("(nil)", fd));
 	i += ft_prints_fd("0x", fd);
 	i += ft_printhex_fd((unsigned long)p, 'x', fd);
