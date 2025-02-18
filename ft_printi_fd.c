@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-size_t	ft_printi_fd(int n, int fd)
+int	ft_printi_fd(int n, int fd)
 {
-	size_t		i;
+	int		i;
 
 	i = 0;
 	if (n == -2147483648)

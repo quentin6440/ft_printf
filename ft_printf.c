@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-size_t	ft_handle_arg(char c, va_list arg, int fd)
+int	ft_handle_arg(char c, va_list arg, int fd)
 {
 	if (c == '%')
 		return (ft_printc_fd('%', fd));
@@ -28,14 +28,17 @@ size_t	ft_handle_arg(char c, va_list arg, int fd)
 		return (ft_printhex_fd(va_arg(arg, unsigned int), c, fd));
 	if (c == 'p')
 		return (ft_printp_fd(va_arg(arg, void *), fd));
+	return (0);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	int		fd;
-	size_t	ct;
+	int		ct;
 	va_list	arg;
 
+	if (!format)
+		return (-1);
 	va_start(arg, format);
 	fd = 1;
 	ct = 0;

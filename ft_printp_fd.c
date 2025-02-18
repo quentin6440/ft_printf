@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-size_t	ft_printp_fd(void *p, int fd)
+int	ft_printp_fd(void *p, int fd)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (!p)

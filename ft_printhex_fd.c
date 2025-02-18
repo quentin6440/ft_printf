@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-size_t	ft_printhex_fd(unsigned long n, char c, int fd)
+int	ft_printhex_fd(unsigned long n, char c, int fd)
 {
-	size_t	i;
+	int		i;
 	size_t	nh;
 
 	nh = 0;

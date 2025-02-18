@@ -17,12 +17,12 @@
 # include <stddef.h>
 # include <stdarg.h>
 
-size_t	ft_printc_fd(char c, int fd);
-size_t	ft_prints_fd(char *p, int fd);
-size_t	ft_printi_fd(int n, int fd);
-size_t	ft_printu_fd(unsigned int n, int fd);
-size_t	ft_printhex_fd(unsigned long n, char c, int fd);
-size_t	ft_printp_fd(void *p, int fd);
-int		ft_printf(const char *format, ...);
+int	ft_printc_fd(char c, int fd);
+int	ft_prints_fd(char *p, int fd);
+int	ft_printi_fd(int n, int fd);
+int	ft_printu_fd(unsigned int n, int fd);
+int	ft_printhex_fd(unsigned long n, char c, int fd);
+int	ft_printp_fd(void *p, int fd);
+int	ft_printf(const char *format, ...);
 
 #endif
