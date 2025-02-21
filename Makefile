@@ -6,7 +6,7 @@
 #    By: qcyril-a <qcyril-a@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/12 18:45:20 by qcyril-a          #+#    #+#              #
-#    Updated: 2025/02/17 15:42:40 by qcyril-a         ###   ########.fr        #
+#    Updated: 2025/02/12 19:02:58 by qcyril-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ ft_printu_fd \
 ft_printi_fd \
 ft_printhex_fd \
 ft_printp_fd
+
 
 CC = gcc
 CFLAG = -Wall -Wextra -Werror
@@ -35,4 +36,4 @@ clean:
 fclean: clean
 	$(RM)	$(NAME)
 
-re: clean all
+re: fclean all
