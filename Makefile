@@ -20,12 +20,14 @@ ft_printi_fd \
 ft_printhex_fd \
 ft_printp_fd
 
-
 CC = gcc
 CFLAG = -Wall -Wextra -Werror
 RM = rm -f
 
 all:$(NAME)
+
+%.o: %.c
+	@$(CC) $(CFLAG) -c $< -o $@
 
 $(NAME): $(SRC:=.o)
 	ar rc $(NAME) $(SRC:=.o)
